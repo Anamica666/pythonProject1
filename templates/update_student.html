@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title style="color: darkblue; font-size: 25px; font-weight: bold;">Update Student</title>
+</head>
+<body>
+    <h1 style="color: blue; font-size: 25px; font-weight: bold;">Update Student</h1>
+    <form action="/update_student/{{ student_id }}" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="{{ student[1] }}"><br><br>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" value="{{ student[2] }}"><br><br>
+        <label for="student_class">Class:</label>
+        <input type="number" id="student_class" name="student_class" value="{{ student[3] }}"><br><br>
+        <label for="tamilmarks">Tamil Marks:</label>
+        <input type="number" id="tamilmarks" name="tamilmarks" value="{{ student[4] }}"><br><br>
+        <label for="englishmarks">English Marks:</label>
+        <input type="number" id="englishmarks" name="englishmarks" value="{{ student[5] }}"><br><br>
+        <label for="sciencemarks">Science Marks:</label>
+        <input type="number" id="sciencemarks" name="sciencemarks" value="{{ student[6] }}"><br><br>
+        <label for="mathsmarks">Maths Marks:</label>
+        <input type="number" id="mathsmarks" name="mathsmarks" value="{{ student[7] }}"><br><br>
+        <label for="socialmarks">Social Marks:</label>
+        <input type="number" id="socialmarks" name="socialmarks" value="{{ student[8] }}"><br><br>
+        <label for="address">Address:</label>
+        <textarea id="address" name="address">{{ student[9] }}</textarea><br><br>
+        <input type="submit" value="Update">
+    </form>
+</body>
+</html>

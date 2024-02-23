@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>School Application - View Students</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: blue;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .action-buttons {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>
+            <span>
+                <button type="button" onclick="window.location.href='add_student'" class="btn btn-primary"><i class="fa fa-arrow-left"></i>&nbsp;Back</button>
+            </span>
+            View Students
+        </h1>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Student Class</th>
+                <th>Tamil Marks</th>
+                <th>English Marks</th>
+                <th>Science Marks</th>
+                <th>Maths Marks</th>
+                <th>Social Marks</th>
+                <th>Address</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in students %}
+            <tr>
+                <td>{{ student[1] }}</td>
+                <td>{{ student[2] }}</td>
+                <td>{{ student[3] }}</td>
+                <td>{{ student[4] }}</td>
+                <td>{{ student[5] }}</td>
+                <td>{{ student[6] }}</td>
+                <td>{{ student[7] }}</td>
+                <td>{{ student[8] }}</td>
+                <td>{{ student[9] }}</td>
+                <td class="action-buttons">
+                    <a href="/update_student/{{ student[0] }}"><button>Update</button></a>
+                    <a href="/delete_student/{{ student[0] }}"><button>Delete</button></a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
