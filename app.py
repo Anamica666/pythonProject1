@@ -5,7 +5,7 @@ app = Flask(__name__)
 app.secret_key = 'your_secret_key'
 
 conn = mysql.connector.connect(
-    host="65.0.101.41",
+    host="65.2.177.243",
     user="ubuntu",
     password="Ubuntu@123",
     database="newdb"
